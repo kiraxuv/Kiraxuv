@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>KGG Game - My Account</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+     <div class="fixed-content-wrapper">
+       <!-- <div class="main-header">
+            <div class="header-left">
+               
+                <img src="kwg.jpg" alt="KWG Game Logo" class="header-logo" style="margin-right: 0;">
+                <span class="header-text">My Account</span>
+            </div>
+            <div class="header-right">
+                <i class="fas fa-ellipsis-v"></i> </div>
+        </div> -->
+
+        <div class="main-content account-content">
+            <div class="profile-section">
+                <div class="profile-avatar">
+                    <img src="assets/kira.png" alt="User Avatar"> </div>
+                <div class="profile-info">
+                    <span class="user-id" id="account-user-id">3104465</span>
+                    <span class="vip-level">VIP0 <i class="fas fa-star"></i></span>
+                    <p class="last-login" id="last-login-info">Last Login: 2025-07-12 16:10:02</p>
+                </div>
+                <div class="profile-refresh-btn">
+                     <i class="fas fa-sync-alt"></i> </div>
+            </div>
+
+            <div class="balance-section">
+                <div class="balance-amount">
+                    <span>Total Balance</span>
+                    <span class="amount" id="total-balance">₹0.00</span>
+                </div>
+                <div class="balance-refresh">
+                    <i class="fas fa-sync-alt" id="balance-refresh-icon"></i>
+                </div>
+            </div>
+            <hr class="balance-divider"> <div class="main-actions-grid">
+                <a href="#" class="action-item">
+                    <img src="assets/wallet.png" alt="Wallet">
+                    <span>Wallet</span>
+                </a>
+                <a href="#" class="action-item">
+                    <img src="assets/deposit.png" alt="Deposit">
+                    <span>Deposit</span>
+                </a>
+                <a href="#" class="action-item">
+                    <img src="assets/withdraw.png" alt="Withdraw">
+                    <span>Withdraw</span>
+                </a>
+                <a href="#" class="action-item">
+                    <img src="assets/vip.png" alt="VIP">
+                    <span>VIP</span>
+                </a>
+            </div>
+
+            <div class="other-options-grid">
+                <a href="#" class="option-item">
+                    <img src="assets/gamehistory.png" alt="Game History">
+                    <span>Game History</span>
+                </a>
+                <a href="#" class="option-item">
+                    <img src="assets/transactionhistory.png" alt="Transaction">
+                    <span>Transaction History</span>
+                </a>
+                <a href="#" class="option-item">
+                    <img src="assets/deposit.png" alt="Deposit History">
+                    <span>Deposit History</span>
+                </a>
+                <a href="#" class="option-item">
+                    <img src="assets/withdraw.png" alt="Withdraw History">
+                    <span>Withdraw History</span>
+                </a>
+                <a href="#" class="option-item full-width">
+                    <img src="assets/myinbox.png" alt="My Inbox">
+                    <span>My Inbox </span>
+                    <i class="fas fa-chevron-right arrow-right"></i>
+                </a>
+                <a href="#" class="option-item full-width">
+                    <img src="assets/gifts.png" alt="Gifts">
+                    <span>Gifts</span>
+                    <i class="fas fa-chevron-right arrow-right"></i>
+                </a>
+                <a href="#" class="option-item full-width">
+                    <img src="assets/gamestatistics.png" alt="Game Statistics">
+                    <span>Game Statistics</span>
+                    <i class="fas fa-chevron-right arrow-right"></i>
+                </a>
+                <a href="#" class="option-item full-width">
+                    <img src="assets/language.png" alt="Language">
+                    <span>Language</span>
+                    <i class="fas fa-chevron-right arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="service-center-section">
+                <h3 class="section-title">Service center</h3>
+                <div class="service-grid">
+                    <a href="#" class="service-item">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                    <a href="#" class="service-item">
+                        <i class="fas fa-comment-alt"></i>
+                        <span>Feedback</span>
+                    </a>
+                    <a href="#" class="service-item">
+                        <i class="fas fa-bell"></i>
+                        <span>Notification</span>
+                    </a>
+                    <a href="#" class="service-item">
+                        <i class="fas fa-headset"></i>
+                        <span>Customer Service</span>
+                    </a>
+                    <a href="#" class="service-item">
+                        <i class="fas fa-book"></i>
+                        <span>Beginner's Guide</span>
+                    </a>
+                    <a href="#" class="service-item">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About us</span>
+                    </a>
+                </div>
+            </div>
+
+            <button class="btn logout-btn" id="logout-button">
+                <i class="fas fa-sign-out-alt"></i> Log Out
+            </button>
+
+
+            </div>
+
+        <div class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="activity.html" class="nav-item">
+                <i class="fas fa-trophy"></i>
+                <span>Activity</span>
+            </a>
+            <a href="#" class="nav-item promotion-center">
+                <i class="fas fa-gift"></i>
+                <span>Promotion</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-wallet"></i>
+                <span>Wallet</span>
+            </a>
+            <a href="account.html" class="nav-item active">
+                <i class="fas fa-user"></i>
+                <span>Account</span>
+            </a>
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script src="../js/account.js"></script>
+</body>
+</html>

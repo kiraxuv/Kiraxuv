@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>KWGGAME - Wallet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/common.css"> 
+    <link rel="stylesheet" href="../css/wallet.css">
+</head>
+<body>
+
+    <div class="fixed-content-wrapper">
+    <main class="main-content wallet-content">
+            <section class="wallet-overview">
+                <div class="wallet-card main-balance-card">
+                    <p class="page-title">Wallet</p>
+                    <div class="wallet-icon-large">
+                        <img src="assets/wallet.png" alt="Wallet Icon"> </div>
+                    <div class="total-balance">
+                        <span id="wallet-total-balance">₹0.00</span>
+                       
+                    </div>
+                    <p>Total Balance</p>
+                </div>
+
+                <div class="wallet-details-circles">
+                    <div class="wallet-circle">
+                        <div class="circle-progress" style="--p:0;">
+                            <span class="circle-text">0.00%</span>
+                        </div>
+                        <p class="wallet-amount">₹0</p>
+                        <p class="wallet-label">Main Wallet</p>
+                    </div>
+                    <div class="wallet-circle">
+                        <div class="circle-progress" style="--p:0;">
+                            <span class="circle-text">0.00%</span>
+                        </div>
+                        <p class="wallet-amount">₹0</p>
+                        <p class="wallet-label">Third Party Wallet</p>
+                    </div>
+                </div>
+
+                <button class="main-wallet-transfer-btn">Main Wallet Transfer</button>
+
+                <div class="wallet-actions">
+                    <a href="#" class="action-item">
+                        <img src="assets/deposit.png" alt="Deposit"> <p>Deposit</p>
+                    </a>
+                    <a href="#" class="action-item">
+                        <img src="assets/withdraw.png" alt="Withdraw"> <p>Withdraw</p>
+                    </a>
+                    <a href="#" class="action-item">
+                        <img src="assets/deposit.png" alt="Deposit History"> <p>Deposit History</p>
+                    </a>
+                    <a href="#" class="action-item">
+                        <img src="assets/withdraw.png" alt="Withdraw History"> <p>Withdraw History</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="game-wallets-grid">
+                <div class="game-wallet-card">
+                    <p class="game-balance">0</p>
+                    <p class="game-name">Lottery</p>
+                </div>
+                <div class="game-wallet-card">
+                    <p class="game-balance">0</p>
+                    <p class="game-name">ZF_EVO</p>
+                </div>
+                <div class="game-wallet-card">
+                    <p class="game-balance">0</p>
+                    <p class="game-name">TB Chess</p>
+                </div>
+                <div class="game-wallet-card">
+                    <p class="game-balance">0</p>
+                    <p class="game-name">TB Slot</p>
+                </div>
+                <div class="game-wallet-card">
+                    <p class="game-balance">0</p>
+                    <p class="game-name">AVIATOR</p>
+                </div>
+                <div class="game-wallet-card">
+                    <p class="game-balance">0</p>
+                    <p class="game-name">SPRIBE</p>
+                </div>
+            </section>
+
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="activity.html" class="nav-item">
+                <i class="fas fa-trophy"></i>
+                <span>Activity</span>
+            </a>
+            <a href="promotion.html" class="nav-item promotion-center">
+                <i class="fas fa-gift"></i>
+                <span>Promotion</span>
+            </a>
+            <a href="wallet.html" class="nav-item active">
+                <i class="fas fa-wallet"></i>
+                <span>Wallet</span>
+            </a>
+            <a href="account.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Account</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="../js/wallet.js"></script>
+</body>
+</html>
