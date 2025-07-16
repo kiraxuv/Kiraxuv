@@ -1,0 +1,94 @@
+/* css/register.css - Styles specific to register.html */
+
+.registration-container {
+    background-color: rgba(140, 70, 200, 0.15);
+    border-radius: 20px;
+    width: 100%; /* Will take 100% of the fixed-content-wrapper */
+    padding: 30px 25px;
+    box-sizing: border-box;
+    text-align: left;
+    margin-top: 0;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.registration-container .page-logo-image {
+    display: block;
+    margin: 0 auto 40px auto;
+    height: 40px;
+    width: auto;
+}
+
+.registration-container .form-group {
+    margin-bottom: 25px;
+}
+
+.registration-container .form-group label {
+    display: block;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.registration-container .input-wrapper {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.registration-container .input-wrapper input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    padding: 15px 15px;
+    color: #fff;
+    font-size: 1.1em;
+    outline: none;
+}
+
+.privacy-agreement {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 0.95em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.privacy-agreement .privacy-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.privacy-agreement .privacy-link:hover {
+    text-decoration: underline;
+}
+
+.register-main-btn {
+    background: linear-gradient(to right, var(--primary-color), #ff8c00);
+    color: #fff;
+    margin-top: 20px;
+}
+
+.register-main-btn:hover {
+    background: linear-gradient(to right, #ff8c00, var(--primary-color));
+}
+
+.login-from-register-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-from-register-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-color);
+}

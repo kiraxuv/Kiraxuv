@@ -1,0 +1,405 @@
+/* css/common.css - Common styles shared across all pages */
+
+/* Global Variables */
+:root {
+    --primary-color: #ff9800; /* Orange */
+    --secondary-color: #6a2a9a; /* Purple */
+    --text-color: #fff;
+    --background-gradient: linear-gradient(to bottom, #6a2a9a, #401f70);
+    --border-radius: 15px;
+    --padding-base: 20px;
+}
+
+/* Body Styles - Common to all pages */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background-gradient);
+    color: var(--text-color);
+    display: flex; /* Changed for overall layout control */
+    flex-direction: column; /* Changed for overall layout control */
+    align-items: center; /* Center content horizontally in the viewport */
+    justify-content: flex-start; /* Align content to the top initially */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll unless necessary for scaling */
+    overflow-y: auto; /* Allow vertical scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+ 
+/* Wrapper for fixed layout scaling */
+.fixed-content-wrapper {
+    width: 375px; /* Define a fixed width, e.g., common mobile width */
+    transform-origin: top center; /* Scale from the top center */
+    /* This transform will be applied via JavaScript or media query as needed */
+    margin: 0 auto;
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack content vertically */
+    min-height: 100vh; /* Ensure it takes full viewport height for proper layout */
+}
+
+
+/* General Button Styles */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Common Header Styles (for login/register/main-header) */
+.header {
+    width: 100%; /* Will take 100% of the fixed-content-wrapper */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    position: absolute; /* Positioned relative to .fixed-content-wrapper if it's the closest positioned ancestor */
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.main-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: rgba(64, 31 , 112, 0.7); /* Slightly transparent for effect */
+    box-sizing: border-box;
+    position: sticky; /* Make it sticky at the top */
+    top: 0;
+    z-index: 20; /* Higher than other content */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-logo {
+    height: 35px; /* Adjust size as needed */
+    width: auto;
+    border-radius: 5px; /* Slight roundness for the logo */
+}
+
+.header-text, .main-header .page-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-right .flag-icon img,
+.header .flag-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: block;
+    object-position: center;
+}
+
+.header .back-arrow, .header .flag-icon {
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    line-height: 1;
+}
+
+/* Back arrow on registration/login pages */
+.register-back-arrow {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 11;
+}
+
+/* General Input Styles */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: none; /* Hidden by default, can be overridden */
+}
+
+.input-wrapper {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 50px;
+}
+
+.input-wrapper input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    padding: 0 15px;
+    color: #fff;
+    font-size: 1.1em;
+    outline: none;
+}
+
+.input-wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Country Code Dropdown */
+.country-code-select {
+    position: relative;
+    background-color: transparent;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 100px;
+}
+
+.country-code-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 0 5px;
+    padding-right: 15px;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+.country-code-select .dropdown-arrow {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Password Toggle */
+.password-input-wrapper {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+/* Custom Checkbox Style */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1em;
+    user-select: none;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 1; /* Allow content to take available space */
+    padding: 15px;
+    padding-bottom: 80px; /* Ensure space for bottom nav */
+    box-sizing: border-box;
+    width: 100%; /* Take full width of fixed-content-wrapper */
+}
+
+
+/* Section Title (used on index and account) */
+.section-title {
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 15px; /* Space for the '|' bar */
+    text-align: left !important;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 80%;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%; /* Center the nav bar horizontally */
+    transform: translateX(-50%); /* Adjust to truly center */
+    width: 375px; /* Match fixed-content-wrapper width */
+    display: flex;
+    justify-content: space-around;
+    background-color: #331A54; /* Darker background for the nav */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 50; /* Ensure it's on top */
+    box-sizing: border-box;
+}
+
+.bottom-nav .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 0.8em;
+    gap: 5px;
+    transition: color 0.2s ease;
+    flex: 1; /* Distribute space evenly */
+}
+
+.bottom-nav .nav-item i {
+    font-size: 1.4em;
+    margin-bottom: 2px;
+}
+
+.bottom-nav .nav-item.active {
+    color: var(--primary-color); /* Active item color */
+}
+
+.bottom-nav .nav-item:hover {
+    color: var(--primary-color);
+}
+
+/* Special style for Promotion center if it has a distinct look (e.g. rounded button) */
+.bottom-nav .promotion-center {
+    background: linear-gradient(to right, var(--primary-color), #ff6c00); /* Orange gradient */
+    border-radius: 50%; /* Make it circular */
+    width: 60px; /* Adjust size */
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    position: relative;
+    top: -20px; /* Lift it up */
+    border: 3px solid #401f70; /* Border color matching body background */
+}
+
+.bottom-nav .promotion-center i {
+    font-size: 1.8em; /* Larger icon */
+    margin-bottom: 0;
+}
+
+.bottom-nav .promotion-center span {
+    font-size: 0.7em; /* Smaller text */
+    margin-top: 2px;
+}
+
+.bottom-nav .promotion-center:hover {
+    transform: translateY(-22px); /* Slight lift on hover */
+}
+
+/* Media Query for Fixed Scaling on smaller screens */
+@media (max-width: 600px) {
+    .fixed-content-wrapper {
+        transform: scale(calc(100vw / 375));
+        width: 375px; 
+    }
+    .bottom-nav {
+        width: 100vw; /* Take full viewport width if fixed-content-wrapper scales */
+        max-width: 375px; /* Limit it to the target mobile width */
+    }
+}

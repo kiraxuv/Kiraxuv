@@ -1,0 +1,97 @@
+/* css/activity.css - Styles specific to activity.html */
+
+.top-header {
+    width: 100%;
+    background-color: rgba(64, 31, 112, 0.7);
+    padding: 15px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-header-logo {
+    height: 35px;
+    width: auto;
+}
+
+.activity-content {
+    padding-top: 5px;
+    padding-bottom: 100px;
+}
+
+.activity-page-header {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 1px;
+}
+
+.activity-page-header .activity-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+
+.activity-page-header .activity-subtitle {
+    font-size: 0.95em;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 0;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 15px;
+}
+
+.activity-card {
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    height: 160px;
+    position: relative;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.activity-card span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    padding-top: 20px;
+    padding-bottom: 5px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
